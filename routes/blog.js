@@ -58,7 +58,7 @@ router.get('/blogs', requireLogin, (req, res) => {
         })
         .then(blogs => {
             blogs = blogs.map(blog => blog.dataValues);
-            res.render('blogs', { blogs: blogs })
+            res.render('blogs', { blogs: blogs, user: req.user.dataValues })
         });
 })
 

@@ -19,7 +19,7 @@ const hbs = expbs.create({
 
     helpers: {}
 });
-// dotenv.config();
+dotenv.config();
 app.use(require('cookie-parser')());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
