@@ -1,13 +1,17 @@
-p {
-    color: red;
-    margin-left: 300px;
-    font-size: 60px;
-}
+p {}
 
 .imageSizer {
     height: 80%;
 }
 
-margin_top {
+.margin_top {
     margin-top: 3em;
+}
+
+.indent {
+    margin-left: 3em;
+}
+
+.font1 {
+    font-size: 2em;
 }

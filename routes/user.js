@@ -55,23 +55,32 @@ router.post('/register', (req, res) => {
     });
 });
 
-// Login
-
 router.get('/login', (req, res) => {
     return res.render('login')
 })
 router.post("/login", (req, res, next) => {
     return passport.authenticate("local", {
         successRedirect: "/",
-        failureRedirect: "/login"
+        failureRedirect: "/login",
+        failureFlash: true,
     })(req, res, next);
 });
 
 // Logout
 router.get("/logout", (req, res) => {
     req.logout();
-    res.redirect("/login");
+    req.session.destroy((err) => {
+        res.clearCookie('connect.sid');
+        res.redirect('/login');
+    });
+
 });
+
+
+
+
+
+
 
 
 
