@@ -54,10 +54,19 @@ router.get('/blogs', requireLogin, (req, res) => {
     }
     return Blog.findAll({
             limit: limit,
-            ...whereClause
+            ...whereClause,
+            include: [{
+                model: User
+            }]
         })
         .then(blogs => {
-            blogs = blogs.map(blog => blog.dataValues);
+            blogs = blogs.map(blog => {
+                blog = blog.dataValues;
+                blog.user = blog.user.dataValues;
+                return blog;
+            });
+            console.log(blogs)
+
             res.render('blogs', { blogs: blogs, user: req.user.dataValues })
         });
 })

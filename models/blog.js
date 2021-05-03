@@ -27,15 +27,20 @@ Blog.init({
         }
     }
 }, {
-
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'blog',
-
-
 });
 
-// Blog.belongsTo(User, { foreignKey: 'user_id' });
+// Blog.associate = () => {
+//     Blog.hasOne(User, {
+//         foreignKey: 'user_id',
+//     });
+// };
+// Blog.hasOne(User, {
+//     foreignKey: 'user_id',
+// });
+Blog.belongsTo(User);
 module.exports = Blog;
