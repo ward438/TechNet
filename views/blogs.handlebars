@@ -1,0 +1,27 @@
+<div class="container-fluid mt-100 margin_top">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <div class="media flex-wrap w-100 align-items-center"><img
+                            src="https://static.thenounproject.com/png/82075-200.png" class="d-block ui-w-40 " alt="">
+                        <div class="card">Message Board Posts
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {{#each blogs}}
+    <form>
+        {{blog_title}}<br>
+        User ID: {{user_id}}
+        {{user.email}}
+        <div>
+            <textarea rows="8" cols="100" readonly>{{content}}
+                            </textarea>
+        </div>
+    </form>
+    {{/each}}
+</div>

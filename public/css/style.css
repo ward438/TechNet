@@ -3,3 +3,11 @@ p {
     margin-left: 300px;
     font-size: 60px;
 }
+
+.imageSizer {
+    height: 80%;
+}
+
+margin_top {
+    margin-top: 3em;
+}

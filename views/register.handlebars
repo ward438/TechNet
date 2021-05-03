@@ -1,0 +1,27 @@
+<div class="card" style="width: 18rem;">
+    <img src="https://miro.medium.com/max/498/1*Es2vCEieszU7QQqsLChl6A.png" class="card-img-top mageSizer" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">User Registration</h5>
+        {{#each errors}}
+        <div class="invalid-feedback" style="display: block">{{message}}</div>
+        {{/each}}
+
+        <form action="/register" method="POST">
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                    placeholder="Enter email" name="email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+
+
+</div>

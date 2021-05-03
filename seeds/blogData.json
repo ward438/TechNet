@@ -1,0 +1,23 @@
+[{
+        "id": "1",
+        "blog_title": "The Life and Times of an Angry Hamburger",
+        "content": "Hamburgers are tired of getting stolen from the Hamburgular. The patties won't stand for it any longer.",
+        "user_id": 1
+    },
+    {
+        "id": "2",
+        "blog_title": "The Sky is Blue",
+        "content": "The sky is blue. And you already knew that",
+        "user_id": 1
+    }, {
+        "id": "3",
+        "blog_title": "Some flowers don't smell nice",
+        "content": "But bees will still jump on in.",
+        "user_id": 1
+    }, {
+        "id": "4",
+        "blog_title": "Pizza?",
+        "content": "Who wants to eat pizza? I know I do",
+        "user_id": 1
+    }
+]
